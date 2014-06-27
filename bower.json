@@ -1,0 +1,9 @@
+{
+  "name": "EmberTesting",
+  "version": "1.0.0",
+  "dependencies": {
+    "jquery" : "~1.10",
+    "ember" : "~1.5",
+    "jquery-mockjax" : "~1.5"
+  }
+}

@@ -14,10 +14,10 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-      "vendor/jquery/jquery.min.js",
-      "vendor/handlebars/handlebars.js",
-      "vendor/ember/ember.js",
-      "vendor/jquery-mockjax/jquery.mockjax.js",
+      "bower_components/jquery/jquery.min.js",
+      "bower_components/handlebars/handlebars.js",
+      "bower_components/ember/ember.js",
+      "bower_components/jquery-mockjax/jquery.mockjax.js",
       "app.js",
       "tests/*.js"
     ],
