@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "karma": "~0.10",
+    "karma-qunit": "~0.1"
+  },
+  "devDependencies": {
+    "karma-qunit": "^0.1.3"
+  }
+}
