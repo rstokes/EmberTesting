@@ -11,6 +11,16 @@ module.exports = function(config) {
     // frameworks to use
     frameworks: ['qunit'],
 
+    plugins: [
+      'karma-qunit',
+      'karma-chrome-launcher',
+      'karma-ember-preprocessor',
+      'karma-phantomjs-launcher'
+    ],
+
+    preprocessors: {
+      "**/*.handlebars": 'ember'
+    },
 
     // list of files / patterns to load in the browser
     files: [
@@ -19,7 +29,8 @@ module.exports = function(config) {
       "bower_components/ember/ember.js",
       "bower_components/jquery-mockjax/jquery.mockjax.js",
       "app.js",
-      "tests/*.js"
+      "tests/*.js",
+      "templates/*.handlebars"
     ],
 
 
@@ -28,9 +39,8 @@ module.exports = function(config) {
 
     ],
 
-
     // test results reporter to use
-    // possible values: 'dots', 'progress', 'junit', 'growl', 'coverage'
+    // possible values: 'dots', 'progress', 'junit', 'growl', 'coverage'``
     reporters: ['progress'],
 
 

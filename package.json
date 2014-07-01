@@ -1,7 +1,8 @@
 {
   "dependencies": {
     "karma": "~0.10",
-    "karma-qunit": "~0.1"
+    "karma-qunit": "~0.1",
+    "karma-ember-preprocessor": "*"
   },
   "devDependencies": {
     "karma-qunit": "^0.1.3"
