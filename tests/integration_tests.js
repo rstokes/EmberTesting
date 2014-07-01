@@ -1,4 +1,5 @@
 test('Table exists', function() {
+  App.Person.people = [];
   App.reset();
   visit("/").then(function() {
     ok(exists("table"));
@@ -6,10 +7,31 @@ test('Table exists', function() {
 });
 
 test('Table contains two elements', function(){
+  App.Person.people = [];
   App.reset();
   visit('/').then(function(){
     var rows = find("table tr").length;
-    equal(rows, 4, rows);
+    equal(rows, 2, rows);
+  });
+});
+
+test('The first person is named x y', function(){
+  App.Person.people = [];
+  App.reset();
+  visit("/").then(function(){
+    equal(find("table tr:eq(0) td:eq(0)").text(), "x y", "the fullname for the first person was incorrect");
+  });
+});
+
+test('delete will remove 1 person', function(){
+  App.Person.people = [];
+  App.reset();
+  visit("/").then(function(){
+    var rows = find("table tr").length;
+    equal(rows, 2, "the table had " + rows + " rows");
+    click('button.delete:eq(0)');
+    rows = find("table tr").length;
+    equal(rows, 1, "the table now has " + rows + " rows")
   });
 });
 
